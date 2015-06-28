@@ -31,24 +31,30 @@ else{
             $output = exec("./$file_exec < TestData/Task$task_number/test$counter.txt");
             $current_in_file = file_get_contents("TestData/Task$task_number/result$counter.txt");
             $output= $output . " ";
-            if(!(strcmp($output, $current_in_file) == -1))
+            $result1 = trim((string)$output);
+            $result2 = trim((string)$current_in_file);
+            var_dump($result1);
+            var_dump($result2);
+            if($result1 === $result2)
             {
+                echo "S: $counter";
                 $test_s++;
             }
             else
             {
+                echo "F: $counter";
                 $test_f++;
             }
-            var_dump($output);
-            var_dump($current_in_file);
-            echo strcmp($output, $current_in_file);
+            //var_dump($output);
+            //var_dump($current_in_file);
+            //echo strcasecmp($output, $current_in_file)."</br>";
         }
     
     //var_dump($output);
         
         //echo $test_s;
         //if($test_s > 0)header("Location: http://localhost/BisonTester/index.php?parr=Success $task_number!!!");else
-        header("Location: http://localhost/BisonTester/index.php?parr=SUCCESS: $test_s FAIL: $test_f");
+       header("Location: http://localhost/BisonTester/index.php?parr=SUCCESS: $test_s FAIL: $test_f");
     
     
     //End task chacking
