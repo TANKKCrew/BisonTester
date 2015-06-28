@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+    <?php error_reporting(0); ?>
 	<head>
 		<title>Bison Tester</title>
 		<meta charset="UTF-8"/>
@@ -52,7 +53,7 @@
             <select id="serv" name="p_task" style="size: 10%">
                 <option value="1">a+b</option>
                 <option value="2">a*b</option>
-                <option value="3">!n</option>
+                <option value="3">n!</option>
             </select></br>
             <div><textarea id="c-code" name="code">
 #include <stdio.h>
