@@ -9,7 +9,7 @@ $task_number = $_POST['p_task'];
 //echo "Task numer $task_number";
 //echo "$task_number";
 if (!$_POST['code']) {
-    header("Location: http://localhost/BisonTester/");
+    header("Location: http://localhost/BisonTester/index.php?parr=NO INPUT CODE");
 }
 else{
     $code = $_POST['code'];
