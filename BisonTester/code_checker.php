@@ -54,7 +54,7 @@ else{
         
         //echo $test_s;
         //if($test_s > 0)header("Location: http://localhost/BisonTester/index.php?parr=Success $task_number!!!");else
-       header("Location: http://localhost/BisonTester/index.php?parr=SUCCESS: $test_s FAIL: $test_f");
+       header("Location: http://localhost/BisonTester/index.php?success=$test_s&fail=$test_f&compiled=$if_compiled");
     
     
     //End task chacking
@@ -63,7 +63,7 @@ else{
 }
  else
  {
-     header("Location: http://localhost/BisonTester/index.php?parr=Error while compiling");
+     header("Location: http://localhost/BisonTester/index.php?parr=1");
  }
 }
 
